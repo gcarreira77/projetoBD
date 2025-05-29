@@ -1,0 +1,53 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\guilh\\UA\\2_ano\\2_semestre\\BD\\projeto\\projetoBD\\forms\\dentista_forms\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A1F367AE-5CC1-4229-8347-AB8CBAD9AE39}|dentista_forms.csproj|c:\\users\\guilh\\ua\\2_ano\\2_semestre\\bd\\projeto\\projetobd\\forms\\dentista_forms\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A1F367AE-5CC1-4229-8347-AB8CBAD9AE39}|dentista_forms.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A1F367AE-5CC1-4229-8347-AB8CBAD9AE39}|dentista_forms.csproj|c:\\users\\guilh\\ua\\2_ano\\2_semestre\\bd\\projeto\\projetobd\\forms\\dentista_forms\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{A1F367AE-5CC1-4229-8347-AB8CBAD9AE39}|dentista_forms.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 314,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Form1.cs [Projeto]",
+              "DocumentMoniker": "C:\\Users\\guilh\\UA\\2_ano\\2_semestre\\BD\\projeto\\projetoBD\\forms\\dentista_forms\\Form1.cs",
+              "RelativeDocumentMoniker": "Form1.cs",
+              "ToolTip": "C:\\Users\\guilh\\UA\\2_ano\\2_semestre\\BD\\projeto\\projetoBD\\forms\\dentista_forms\\Form1.cs [Projeto]",
+              "RelativeToolTip": "Form1.cs [Projeto]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-29T14:14:10.543Z",
+              "EditorCaption": " [Projeto]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Form1.cs",
+              "DocumentMoniker": "C:\\Users\\guilh\\UA\\2_ano\\2_semestre\\BD\\projeto\\projetoBD\\forms\\dentista_forms\\Form1.cs",
+              "RelativeDocumentMoniker": "Form1.cs",
+              "ToolTip": "C:\\Users\\guilh\\UA\\2_ano\\2_semestre\\BD\\projeto\\projetoBD\\forms\\dentista_forms\\Form1.cs",
+              "RelativeToolTip": "Form1.cs",
+              "ViewState": "AgIAAEMAAAAAAAAAAAAkwFMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-29T13:55:36.021Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
