@@ -84,18 +84,22 @@ namespace dentista_forms
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-
+            PacientesForm pacientesForm = new PacientesForm();
+            pacientesForm.ShowDialog();
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-
+            ConsultasForm consultasForm = new ConsultasForm();
+            consultasForm.ShowDialog();
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
-
+            PagamentosForm pagamentosForm = new PagamentosForm();
+            pagamentosForm.ShowDialog();
         }
+
 
         private Button button1;
         private Button button2;

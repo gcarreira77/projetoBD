@@ -6,3 +6,4 @@ C:\Users\guilh\UA\2_ano\2_semestre\BD\projeto\projetoBD\forms\dentista_forms\obj
 C:\Users\guilh\UA\2_ano\2_semestre\BD\projeto\projetoBD\forms\dentista_forms\obj\Debug\net8.0-windows\dentista_forms.csproj.CoreCompileInputs.cache
 C:\Users\guilh\UA\2_ano\2_semestre\BD\projeto\projetoBD\forms\dentista_forms\obj\Debug\net8.0-windows\dentista_forms.sourcelink.json
 C:\Users\guilh\UA\2_ano\2_semestre\BD\projeto\projetoBD\forms\dentista_forms\obj\Debug\net8.0-windows\dentista_forms.Form1.resources
+C:\Users\guilh\UA\2_ano\2_semestre\BD\projeto\projetoBD\forms\dentista_forms\obj\Debug\net8.0-windows\dentista_forms.PacientesForm.resources

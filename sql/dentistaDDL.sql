@@ -4,6 +4,21 @@
 USE Dentista
 GO
 
+DROP TABLE IF EXISTS Assiste;
+DROP TABLE IF EXISTS Pratica;
+DROP TABLE IF EXISTS Pagamento;
+DROP TABLE IF EXISTS Seguros;
+DROP TABLE IF EXISTS Recibo;
+DROP TABLE IF EXISTS Dentes;
+DROP TABLE IF EXISTS Consulta;
+DROP TABLE IF EXISTS Paciente;
+DROP TABLE IF EXISTS Medico;
+DROP TABLE IF EXISTS Enfermeiro;
+DROP TABLE IF EXISTS Rececionista;
+DROP TABLE IF EXISTS Seguradora;
+DROP TABLE IF EXISTS Utilizador;
+
+GO
 -- Entidade Utilizador
 CREATE TABLE Utilizador (
     ID_util INT PRIMARY KEY,
@@ -37,7 +52,7 @@ CREATE TABLE Rececionista (
 CREATE TABLE Paciente (
     num_paciente INT PRIMARY KEY,
     morada VARCHAR(100),
-    nif INT,
+    nif INT UNIQUE,
     data_nasc DATE NOT NULL CHECK (data_nasc < GETDATE()),
     nome VARCHAR(100) NOT NULL,
     cod_postal VARCHAR(10),
@@ -130,21 +145,7 @@ CREATE TABLE Assiste (
     FOREIGN KEY (num_paciente, data, hora) REFERENCES Consulta(num_paciente, data, hora)
 );
 
-/* 
-DROP TABLE Assiste;
-DROP TABLE Pratica;
-DROP TABLE Pagamento;
-DROP TABLE Seguros;
-DROP TABLE Recibo;
-DROP TABLE Dentes;
-DROP TABLE Consulta;
-DROP TABLE Paciente;
-DROP TABLE Medico;
-DROP TABLE Enfermeiro;
-DROP TABLE Rececionista;
-DROP TABLE Seguradora;
-DROP TABLE Utilizador;
-*/
+
 
 
 
