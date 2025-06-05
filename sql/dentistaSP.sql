@@ -56,7 +56,7 @@ BEGIN
         SELECT 1 FROM Seguros WHERE num_paciente = @num_paciente
     )
     BEGIN
-        PRINT 'Não é possível remover o paciente: existem registos associados.'
+        RAISERROR('Paciente já associado a consulta/recibo/pagamento.', 16, 1);
         RETURN
     END
 
@@ -128,7 +128,6 @@ CREATE OR ALTER PROCEDURE CriarUtilizador
     @morada VARCHAR(100),
     @cod_postal VARCHAR(10),
     @num_contribuinte INT,
-    @passwd VARCHAR(15),
     @data_nasc DATE,
     @telemovel VARCHAR(9),
     @nome VARCHAR(100)
@@ -138,8 +137,8 @@ BEGIN
 
     SELECT @id_util = ISNULL(MAX(ID_util), 0) + 1 FROM Utilizador;
 
-    INSERT INTO Utilizador (ID_util, morada, cod_postal, num_contribuinte, passwd, data_nasc, telemovel, nome)
-    VALUES (@id_util, @morada, @cod_postal, @num_contribuinte, @passwd, @data_nasc, @telemovel, @nome);
+    INSERT INTO Utilizador (ID_util, morada, cod_postal, num_contribuinte, data_nasc, telemovel, nome)
+    VALUES (@id_util, @morada, @cod_postal, @num_contribuinte, @data_nasc, @telemovel, @nome);
 
     SELECT @id_util AS NovoID;
 END;
@@ -152,7 +151,6 @@ CREATE OR ALTER PROCEDURE AtualizarUtilizador
     @morada VARCHAR(100),
     @cod_postal VARCHAR(10),
     @num_contribuinte INT,
-    @passwd VARCHAR(15),
     @data_nasc DATE,
     @telemovel VARCHAR(9),
     @nome VARCHAR(100)
@@ -162,7 +160,6 @@ BEGIN
     SET morada = @morada,
         cod_postal = @cod_postal,
         num_contribuinte = @num_contribuinte,
-        passwd = @passwd,
         data_nasc = @data_nasc,
         telemovel = @telemovel,
         nome = @nome
@@ -183,7 +180,7 @@ BEGIN
         SELECT 1 FROM Recibo WHERE ID_rececionista = @ID_util
     )
     BEGIN
-        PRINT 'Não é possível remover o utilizador: associado a outras tabelas (Pratica, Assiste ou Recibo).'
+	    RAISERROR('Não é possível remover o utilizador porque está associado a uma consulta/recibo.', 16, 1);
         RETURN
     END
 

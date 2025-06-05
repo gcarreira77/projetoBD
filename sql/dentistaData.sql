@@ -1,7 +1,7 @@
 USE Dentista;
 GO
 
-
+/*
 DELETE FROM Pagamento;
 DELETE FROM Recibo;
 DELETE FROM Pratica;
@@ -16,18 +16,19 @@ DELETE FROM Rececionista;
 DELETE FROM Utilizador;
 DELETE FROM Seguradora;
 
-
 GO
+*/
+
 
 -- Utilizadores
 INSERT INTO Utilizador VALUES 
-(1, 'Rua das Flores 12', '1200-100', 123456789, 'senha123', '1975-04-22', '912345678', 'Dr. António Lopes'),
-(2, 'Av. República 45', '1050-197', 234567891, 'senha123', '1980-02-10', '913456789', 'Dr. Beatriz Silva'),
-(3, 'Rua do Alecrim 98', '1100-456', 345678912, 'senha123', '1985-11-30', '914567890', 'Dra. Carlos Nunes'),
-(4, 'Rua da Saúde 21', '1250-220', 456789123, 'senha123', '1990-07-15', '915678901', 'Enf. Marta Costa'),
-(5, 'Av. Liberdade 33', '1260-001', 567891234, 'senha123', '1988-03-25', '916789012', 'Enf. Pedro Alves'),
-(6, 'Rua da Estação 77', '1300-250', 678912345, 'senha123', '1972-12-12', '917890123', 'Receção Ana Freitas'),
-(7, 'Largo da Igreja 5', '1400-789', 789123456, 'senha123', '1991-09-01', '918901234', 'Receção Miguel Rocha');
+(1, 'Rua das Flores 12', '1200-100', 123456789, '1975-04-22', '912345678', 'Dr. António Lopes'),
+(2, 'Av. República 45', '1050-197', 234567891, '1980-02-10', '913456789', 'Dr. Beatriz Silva'),
+(3, 'Rua do Alecrim 98', '1100-456', 345678912, '1985-11-30', '914567890', 'Dra. Carlos Nunes'),
+(4, 'Rua da Saúde 21', '1250-220', 456789123, '1990-07-15', '915678901', 'Enf. Marta Costa'),
+(5, 'Av. Liberdade 33', '1260-001', 567891234, '1988-03-25', '916789012', 'Enf. Pedro Alves'),
+(6, 'Rua da Estação 77', '1300-250', 678912345, '1972-12-12', '917890123', 'Receção Ana Freitas'),
+(7, 'Largo da Igreja 5', '1400-789', 789123456, '1991-09-01', '918901234', 'Receção Miguel Rocha');
 
 -- Médicos
 INSERT INTO Medico VALUES 
@@ -45,6 +46,19 @@ INSERT INTO Rececionista VALUES
 (6),
 (7);
 
+-- Pacientes
+INSERT INTO Paciente VALUES 
+(101, 'Rua Nova 1', 111111111, '2010-06-12', 'Joana Marques', '1500-001', '921111111', 'Usa aparelho desde 2023'),
+(102, 'Rua Verde 2', 222222222, '2015-03-05', 'Tomás Oliveira', '1600-002', '922222222', 'Primeira consulta pediátrica'),
+(103, 'Av. Azul 3', 333333333, '1990-08-19', 'Carla Mendes', '1700-003', '923333333', 'Limpeza regular'),
+(104, 'Largo Sol 4', 444444444, '1982-12-01', 'Filipe Gomes', '1800-004', '924444444', 'Consulta de rotina'),
+(105, 'Rua da Alegria 5', 555555555, '2000-01-25', 'Sofia Fernandes', '1900-005', '925555555', 'Gengivite ligeira'),
+(106, 'Av. da Liberdade 6', 666666666, '1988-11-11', 'Bruno Coelho', '2000-006', '926666666', 'Sem seguro'),
+(107, 'Travessa do Norte 7', 777777777, '1995-07-07', 'Rita Santos', '2100-007', '927777777', 'Cáries ativas'),
+(108, 'Rua da Escola 8', 888888888, '2012-02-02', 'Diogo Matos', '2200-008', '928888888', 'Consulta infantil'),
+(109, 'Av. Central 9', 999999999, '1999-09-09', 'Inês Lima', '2300-009', '929999999', 'Limpeza profunda'),
+(110, 'Praça Velha 10', 101010101, '1980-10-10', 'Pedro Reis', '2400-010', '930000000', 'Consulta para colocação de aparelho');
+
 -- Seguradoras
 INSERT INTO Seguradora VALUES 
 ('Medis', 'apoio@medis.pt'),
@@ -60,18 +74,6 @@ INSERT INTO Seguros VALUES
 ('Aparelhos Dentários', 50.00, 104, 'Fidelidade'),
 ('Higiene Oral', 30.00, 105, 'Medis');
 
--- Pacientes
-INSERT INTO Paciente VALUES 
-(101, 'Rua Nova 1', 111111111, '2010-06-12', 'Joana Marques', '1500-001', '921111111', 'Usa aparelho desde 2023'),
-(102, 'Rua Verde 2', 222222222, '2015-03-05', 'Tomás Oliveira', '1600-002', '922222222', 'Primeira consulta pediátrica'),
-(103, 'Av. Azul 3', 333333333, '1990-08-19', 'Carla Mendes', '1700-003', '923333333', 'Limpeza regular'),
-(104, 'Largo Sol 4', 444444444, '1982-12-01', 'Filipe Gomes', '1800-004', '924444444', 'Consulta de rotina'),
-(105, 'Rua da Alegria 5', 555555555, '2000-01-25', 'Sofia Fernandes', '1900-005', '925555555', 'Gengivite ligeira'),
-(106, 'Av. da Liberdade 6', 666666666, '1988-11-11', 'Bruno Coelho', '2000-006', '926666666', 'Sem seguro'),
-(107, 'Travessa do Norte 7', 777777777, '1995-07-07', 'Rita Santos', '2100-007', '927777777', 'Cáries ativas'),
-(108, 'Rua da Escola 8', 888888888, '2012-02-02', 'Diogo Matos', '2200-008', '928888888', 'Consulta infantil'),
-(109, 'Av. Central 9', 999999999, '1999-09-09', 'Inês Lima', '2300-009', '929999999', 'Limpeza profunda'),
-(110, 'Praça Velha 10', 101010101, '1980-10-10', 'Pedro Reis', '2400-010', '930000000', 'Consulta para colocação de aparelho');
 
 -- Dentes
 INSERT INTO Dentes VALUES (101, 11, 'Com aparelho');

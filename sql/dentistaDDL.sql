@@ -25,7 +25,6 @@ CREATE TABLE Utilizador (
     morada VARCHAR(100),
     cod_postal VARCHAR(10),
     num_contribuinte INT NOT NULL UNIQUE,
-    passwd VARCHAR(15) NOT NULL,
     data_nasc DATE NOT NULL CHECK (data_nasc < GETDATE()),
     telemovel VARCHAR(9) CHECK (LEN(telemovel) = 9),
 	nome VARCHAR(100) NOT NULL
@@ -114,11 +113,12 @@ CREATE TABLE Pagamento (
 
 -- Entidade Seguros
 CREATE TABLE Seguros (
-    tipo VARCHAR(100) PRIMARY KEY,
-	percentagem DECIMAL(5,2) NOT NULL CHECK (percentagem >= 0 AND percentagem <= 100),
-	num_paciente INT NOT NULL,
+    tipo VARCHAR(100),
+    percentagem DECIMAL(5,2) NOT NULL CHECK (percentagem >= 0 AND percentagem <= 100),
+    num_paciente INT NOT NULL,
     nome_seguradora VARCHAR(100) NOT NULL,
-	FOREIGN KEY (num_paciente) REFERENCES Paciente(num_paciente),
+    PRIMARY KEY (tipo, num_paciente),
+    FOREIGN KEY (num_paciente) REFERENCES Paciente(num_paciente),
     FOREIGN KEY (nome_seguradora) REFERENCES Seguradora(nome)
 );
 
