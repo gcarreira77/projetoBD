@@ -47,6 +47,7 @@
             btnSave = new Button();
             btnCancel = new Button();
             dtpdatanasc = new DateTimePicker();
+            tbnum = new TextBox();
             SuspendLayout();
             // 
             // label1
@@ -64,9 +65,9 @@
             label2.AutoSize = true;
             label2.Location = new Point(129, 82);
             label2.Name = "label2";
-            label2.Size = new Size(124, 25);
+            label2.Size = new Size(102, 25);
             label2.TabIndex = 1;
-            label2.Text = "Num_paciente";
+            label2.Text = "Nº Paciente";
             // 
             // lbnum
             // 
@@ -115,9 +116,9 @@
             label6.AutoSize = true;
             label6.Location = new Point(129, 266);
             label6.Name = "label6";
-            label6.Size = new Size(100, 25);
+            label6.Size = new Size(103, 25);
             label6.TabIndex = 7;
-            label6.Text = "cod. postal";
+            label6.Text = "Cod. postal";
             // 
             // label7
             // 
@@ -208,11 +209,19 @@
             dtpdatanasc.Size = new Size(300, 31);
             dtpdatanasc.TabIndex = 18;
             // 
+            // tbnum
+            // 
+            tbnum.Location = new Point(259, 76);
+            tbnum.Name = "tbnum";
+            tbnum.Size = new Size(413, 31);
+            tbnum.TabIndex = 19;
+            // 
             // CreateEditFormPacientes
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(tbnum);
             Controls.Add(dtpdatanasc);
             Controls.Add(btnCancel);
             Controls.Add(btnSave);
@@ -259,5 +268,6 @@
         private Button btnSave;
         private Button btnCancel;
         private DateTimePicker dtpdatanasc;
+        private TextBox tbnum;
     }
 }

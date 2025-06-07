@@ -3,12 +3,15 @@ using Microsoft.Data.SqlClient;
 using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace DentistaFroms.Repositories
 {
     public class UtilizadoresRepository
     {
-        private readonly string connectionString = "Data Source=PCGC;Initial Catalog=Dentista;Integrated Security=True;Trust Server Certificate=True";
+        private readonly string connectionString = DatabaseConfig.ConnectionString;
 
         public List<Utilizador> GetUtilizadores()
         {
@@ -20,32 +23,32 @@ namespace DentistaFroms.Repositories
                 {
                     connection.Open();
 
-                    string sql = "SELECT * FROM Utilizador ORDER BY ID_util DESC";
-                    using (SqlCommand command = new SqlCommand(sql, connection))
-                    {
-                        using (SqlDataReader reader = command.ExecuteReader())
-                        {
-                            while (reader.Read())
-                            {
-                                Utilizador u = new Utilizador();
-                                u.ID_util = reader.GetInt32(0);
-                                u.morada = reader.GetString(1);
-                                u.cod_postal = reader.GetString(2);
-                                u.num_contribuinte = reader.GetInt32(3);
-                                u.passwd = reader.GetString(4);
-                                u.data_nasc = reader.GetDateTime(5).ToString("yyyy-MM-dd");
-                                u.telemovel = reader.GetString(6);
-                                u.nome = reader.GetString(7);
+                    string sql = @"SELECT * FROM vw_UtilizadoresComTipo ORDER BY ID_util DESC";
 
-                                utilizadores.Add(u);
-                            }
+                    using (SqlCommand command = new SqlCommand(sql, connection))
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            Utilizador u = new Utilizador();
+                            u.ID_util = reader.GetInt32(0);
+                            u.morada = reader.GetString(1);
+                            u.cod_postal = reader.GetString(2);
+                            u.num_contribuinte = reader.GetInt32(3);
+                            u.data_nasc = reader.GetDateTime(4).ToString("yyyy-MM-dd");
+                            u.telemovel = reader.GetString(5);
+                            u.nome = reader.GetString(6);
+                            u.tipo = reader.GetString(7);
+                            u.especialidade = reader.IsDBNull(8) ? "" : reader.GetString(8);
+
+                            utilizadores.Add(u);
                         }
                     }
                 }
             }
             catch (Exception ex)
             {
-                Console.WriteLine("Erro ao obter utilizadores: " + ex.ToString());
+                Console.WriteLine("Exception: " + ex.ToString());
             }
 
             return utilizadores;
@@ -59,7 +62,7 @@ namespace DentistaFroms.Repositories
                 {
                     connection.Open();
 
-                    string sql = "SELECT * FROM Utilizador WHERE ID_util = @ID_util";
+                    string sql = "SELECT * FROM vw_UtilizadoresComTipo WHERE ID_util = @ID_util";
                     using (SqlCommand command = new SqlCommand(sql, connection))
                     {
                         command.Parameters.AddWithValue("@ID_util", id_util);
@@ -73,10 +76,11 @@ namespace DentistaFroms.Repositories
                                 u.morada = reader.GetString(1);
                                 u.cod_postal = reader.GetString(2);
                                 u.num_contribuinte = reader.GetInt32(3);
-                                u.passwd = reader.GetString(4);
-                                u.data_nasc = reader.GetDateTime(5).ToString("yyyy-MM-dd");
-                                u.telemovel = reader.GetString(6);
-                                u.nome = reader.GetString(7);
+                                u.data_nasc = reader.GetDateTime(4).ToString();
+                                u.telemovel = reader.GetString(5);
+                                u.nome = reader.GetString(6);
+                                u.tipo = reader.GetString(7);
+                                u.especialidade = reader.IsDBNull(8) ? "" : reader.GetString(8);
 
                                 return u;
                             }
@@ -86,13 +90,13 @@ namespace DentistaFroms.Repositories
             }
             catch (Exception ex)
             {
-                Console.WriteLine("Erro ao obter utilizador: " + ex.ToString());
+                Console.WriteLine("Exception: " + ex.ToString());
             }
 
             return null;
         }
 
-        public int? CreateUtilizador(Utilizador utilizador)
+        public void CreateUtilizador(Utilizador utilizador)
         {
             try
             {
@@ -107,24 +111,25 @@ namespace DentistaFroms.Repositories
                         command.Parameters.AddWithValue("@morada", utilizador.morada);
                         command.Parameters.AddWithValue("@cod_postal", utilizador.cod_postal);
                         command.Parameters.AddWithValue("@num_contribuinte", utilizador.num_contribuinte);
-                        command.Parameters.AddWithValue("@passwd", utilizador.passwd);
                         command.Parameters.AddWithValue("@data_nasc", DateTime.Parse(utilizador.data_nasc));
                         command.Parameters.AddWithValue("@telemovel", utilizador.telemovel);
                         command.Parameters.AddWithValue("@nome", utilizador.nome);
 
-                        var result = command.ExecuteScalar();
-                        return result != null ? Convert.ToInt32(result) : null;
+                        command.Parameters.AddWithValue("@tipo", utilizador.tipo);
+                        command.Parameters.AddWithValue("@especialidade",
+                            utilizador.tipo == "Médico" ? utilizador.especialidade : DBNull.Value);
+
+                        command.ExecuteNonQuery();
                     }
                 }
             }
             catch (Exception ex)
             {
-                Console.WriteLine("Erro ao criar utilizador: " + ex.ToString());
-                return null;
+                Console.WriteLine("Exception: " + ex.ToString());
             }
         }
 
-        public bool UpdateUtilizador(Utilizador utilizador)
+        public void UpdateUtilizador(Utilizador utilizador)
         {
             try
             {
@@ -139,21 +144,15 @@ namespace DentistaFroms.Repositories
                         command.Parameters.AddWithValue("@ID_util", utilizador.ID_util);
                         command.Parameters.AddWithValue("@morada", utilizador.morada);
                         command.Parameters.AddWithValue("@cod_postal", utilizador.cod_postal);
-                        command.Parameters.AddWithValue("@num_contribuinte", utilizador.num_contribuinte);
-                        command.Parameters.AddWithValue("@passwd", utilizador.passwd);
-                        command.Parameters.AddWithValue("@data_nasc", DateTime.Parse(utilizador.data_nasc));
                         command.Parameters.AddWithValue("@telemovel", utilizador.telemovel);
-                        command.Parameters.AddWithValue("@nome", utilizador.nome);
 
                         command.ExecuteNonQuery();
-                        return true;
                     }
                 }
             }
             catch (Exception ex)
-            {
-                Console.WriteLine("Erro ao atualizar utilizador: " + ex.ToString());
-                return false;
+            { 
+                Console.WriteLine("Exception: " + ex.ToString());
             }
         }
 

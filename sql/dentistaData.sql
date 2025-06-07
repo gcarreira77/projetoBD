@@ -1,7 +1,7 @@
 USE Dentista;
 GO
-
 /*
+
 DELETE FROM Pagamento;
 DELETE FROM Recibo;
 DELETE FROM Pratica;
@@ -17,18 +17,19 @@ DELETE FROM Utilizador;
 DELETE FROM Seguradora;
 
 GO
+
 */
 
 
 -- Utilizadores
 INSERT INTO Utilizador VALUES 
-(1, 'Rua das Flores 12', '1200-100', 123456789, '1975-04-22', '912345678', 'Dr. António Lopes'),
-(2, 'Av. República 45', '1050-197', 234567891, '1980-02-10', '913456789', 'Dr. Beatriz Silva'),
-(3, 'Rua do Alecrim 98', '1100-456', 345678912, '1985-11-30', '914567890', 'Dra. Carlos Nunes'),
-(4, 'Rua da Saúde 21', '1250-220', 456789123, '1990-07-15', '915678901', 'Enf. Marta Costa'),
-(5, 'Av. Liberdade 33', '1260-001', 567891234, '1988-03-25', '916789012', 'Enf. Pedro Alves'),
-(6, 'Rua da Estação 77', '1300-250', 678912345, '1972-12-12', '917890123', 'Receção Ana Freitas'),
-(7, 'Largo da Igreja 5', '1400-789', 789123456, '1991-09-01', '918901234', 'Receção Miguel Rocha');
+(1, 'Rua das Flores 12', '1200-100', 123456789, '1975-04-22', '912345678', 'António Lopes'),
+(2, 'Av. República 45', '1050-197', 234567891, '1980-02-10', '913456789', 'Beatriz Silva'),
+(3, 'Rua do Alecrim 98', '1100-456', 345678912, '1985-11-30', '914567890', 'Carlos Nunes'),
+(4, 'Rua da Saúde 21', '1250-220', 456789123, '1990-07-15', '915678901', 'Marta Costa'),
+(5, 'Av. Liberdade 33', '1260-001', 567891234, '1988-03-25', '916789012', 'Pedro Alves'),
+(6, 'Rua da Estação 77', '1300-250', 678912345, '1972-12-12', '917890123', 'Ana Freitas'),
+(7, 'Largo da Igreja 5', '1400-789', 789123456, '1991-09-01', '918901234', 'Miguel Rocha');
 
 -- Médicos
 INSERT INTO Medico VALUES 

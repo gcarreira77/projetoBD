@@ -15,7 +15,8 @@ namespace DentistaFroms.Models
         public string nome = "";
         public string cod_postal = "";
         public string telemovel = "";
-        public string passwd = "";
+        public string tipo = ""; 
+        public string especialidade = ""; 
 
     }
 }

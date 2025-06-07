@@ -1,5 +1,5 @@
---CREATE DATABASE Dentista
--- GO
+--CREATE Database Dentista
+--GO
 
 USE Dentista
 GO

@@ -130,17 +130,36 @@ CREATE OR ALTER PROCEDURE CriarUtilizador
     @num_contribuinte INT,
     @data_nasc DATE,
     @telemovel VARCHAR(9),
-    @nome VARCHAR(100)
+    @nome VARCHAR(100),
+    @tipo VARCHAR(20),
+    @especialidade VARCHAR(100) = NULL
 AS
 BEGIN
     DECLARE @id_util INT;
 
+    -- Gerar novo ID_util
     SELECT @id_util = ISNULL(MAX(ID_util), 0) + 1 FROM Utilizador;
 
+    -- Inserir na tabela Utilizador
     INSERT INTO Utilizador (ID_util, morada, cod_postal, num_contribuinte, data_nasc, telemovel, nome)
     VALUES (@id_util, @morada, @cod_postal, @num_contribuinte, @data_nasc, @telemovel, @nome);
 
-    SELECT @id_util AS NovoID;
+    -- Inserir na tabela específica consoante o tipo
+    IF @tipo = 'Médico'
+    BEGIN
+        INSERT INTO Medico (ID_util, especialidade)
+        VALUES (@id_util, @especialidade);
+    END
+    ELSE IF @tipo = 'Enfermeiro'
+    BEGIN
+        INSERT INTO Enfermeiro (ID_util)
+        VALUES (@id_util);
+    END
+    ELSE IF @tipo = 'Rececionista'
+    BEGIN
+        INSERT INTO Rececionista (ID_util)
+        VALUES (@id_util);
+    END
 END;
 GO
 
@@ -150,20 +169,14 @@ CREATE OR ALTER PROCEDURE AtualizarUtilizador
     @ID_util INT,
     @morada VARCHAR(100),
     @cod_postal VARCHAR(10),
-    @num_contribuinte INT,
-    @data_nasc DATE,
-    @telemovel VARCHAR(9),
-    @nome VARCHAR(100)
+    @telemovel VARCHAR(9)
 AS
 BEGIN
     UPDATE Utilizador
     SET morada = @morada,
         cod_postal = @cod_postal,
-        num_contribuinte = @num_contribuinte,
-        data_nasc = @data_nasc,
-        telemovel = @telemovel,
-        nome = @nome
-    WHERE ID_util = @ID_util;
+        telemovel = @telemovel
+    WHERE ID_util = @ID_util
 END;
 GO
 

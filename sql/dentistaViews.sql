@@ -1,10 +1,11 @@
-Use Dentista
+USE Dentista
 GO
 
-
-CREATE VIEW vw_Consulta AS
+CREATE OR ALTER VIEW vw_Consulta AS
 SELECT 
     c.data AS DataConsulta,
+    c.hora AS HoraConsulta,           
+
     p.num_paciente AS ID_Paciente,
     p.nome AS Nome_Paciente,
     
@@ -26,10 +27,30 @@ LEFT JOIN Assiste a ON c.num_paciente = a.num_paciente AND c.data = a.data AND c
 LEFT JOIN Enfermeiro e ON a.ID_enfermeiro = e.ID_util
 LEFT JOIN Utilizador u_enf ON e.ID_util = u_enf.ID_util;
 
-
+GO
+CREATE OR ALTER VIEW vw_UtilizadoresComTipo AS
+SELECT 
+    u.ID_util,
+    u.morada,
+    u.cod_postal,
+    u.num_contribuinte,
+    u.data_nasc,
+    u.telemovel,
+    u.nome,
+    CASE 
+        WHEN m.ID_util IS NOT NULL THEN 'Médico'
+        WHEN e.ID_util IS NOT NULL THEN 'Enfermeiro'
+        WHEN r.ID_util IS NOT NULL THEN 'Rececionista'
+        ELSE ''
+    END AS tipo,
+    m.especialidade
+FROM Utilizador u
+LEFT JOIN Medico m ON u.ID_util = m.ID_util
+LEFT JOIN Enfermeiro e ON u.ID_util = e.ID_util
+LEFT JOIN Rececionista r ON u.ID_util = r.ID_util;
 
 /**
 DROP vw_Consulta;
-
+DROP vw_UtilizadoresComTipo
 
 **/

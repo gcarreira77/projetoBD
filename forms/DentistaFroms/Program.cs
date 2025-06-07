@@ -11,7 +11,7 @@ namespace DentistaFroms
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
-            Application.Run(new Pacientes());
+            Application.Run(new Forms1());
         }
     }
 }

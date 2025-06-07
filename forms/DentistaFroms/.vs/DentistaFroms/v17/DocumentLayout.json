@@ -3,50 +3,30 @@
   "WorkspaceRootPath": "C:\\Users\\guilh\\UA\\2_ano\\2_semestre\\BD\\projeto\\projetoBD\\forms\\DentistaFroms\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{B6A75ED2-3F1A-4FAC-9DE2-32773D75A1D7}|DentistaFroms.csproj|c:\\users\\guilh\\ua\\2_ano\\2_semestre\\bd\\projeto\\projetobd\\forms\\dentistafroms\\createeditformpacientes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B6A75ED2-3F1A-4FAC-9DE2-32773D75A1D7}|DentistaFroms.csproj|solutionrelative:createeditformpacientes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B6A75ED2-3F1A-4FAC-9DE2-32773D75A1D7}|DentistaFroms.csproj|c:\\users\\guilh\\ua\\2_ano\\2_semestre\\bd\\projeto\\projetobd\\forms\\dentistafroms\\repositories\\consultasrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B6A75ED2-3F1A-4FAC-9DE2-32773D75A1D7}|DentistaFroms.csproj|solutionrelative:repositories\\consultasrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B6A75ED2-3F1A-4FAC-9DE2-32773D75A1D7}|DentistaFroms.csproj|c:\\users\\guilh\\ua\\2_ano\\2_semestre\\bd\\projeto\\projetobd\\forms\\dentistafroms\\createeditformpacientes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{B6A75ED2-3F1A-4FAC-9DE2-32773D75A1D7}|DentistaFroms.csproj|solutionrelative:createeditformpacientes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{B6A75ED2-3F1A-4FAC-9DE2-32773D75A1D7}|DentistaFroms.csproj|c:\\users\\guilh\\ua\\2_ano\\2_semestre\\bd\\projeto\\projetobd\\forms\\dentistafroms\\consultas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B6A75ED2-3F1A-4FAC-9DE2-32773D75A1D7}|DentistaFroms.csproj|solutionrelative:consultas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B6A75ED2-3F1A-4FAC-9DE2-32773D75A1D7}|DentistaFroms.csproj|c:\\users\\guilh\\ua\\2_ano\\2_semestre\\bd\\projeto\\projetobd\\forms\\dentistafroms\\createeditformsutilizadores.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B6A75ED2-3F1A-4FAC-9DE2-32773D75A1D7}|DentistaFroms.csproj|solutionrelative:createeditformsutilizadores.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B6A75ED2-3F1A-4FAC-9DE2-32773D75A1D7}|DentistaFroms.csproj|c:\\users\\guilh\\ua\\2_ano\\2_semestre\\bd\\projeto\\projetobd\\forms\\dentistafroms\\models\\consulta.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B6A75ED2-3F1A-4FAC-9DE2-32773D75A1D7}|DentistaFroms.csproj|solutionrelative:models\\consulta.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B6A75ED2-3F1A-4FAC-9DE2-32773D75A1D7}|DentistaFroms.csproj|c:\\users\\guilh\\ua\\2_ano\\2_semestre\\bd\\projeto\\projetobd\\forms\\dentistafroms\\createeditformsutilizadores.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{B6A75ED2-3F1A-4FAC-9DE2-32773D75A1D7}|DentistaFroms.csproj|solutionrelative:createeditformsutilizadores.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B6A75ED2-3F1A-4FAC-9DE2-32773D75A1D7}|DentistaFroms.csproj|c:\\users\\guilh\\ua\\2_ano\\2_semestre\\bd\\projeto\\projetobd\\forms\\dentistafroms\\pacientes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{B6A75ED2-3F1A-4FAC-9DE2-32773D75A1D7}|DentistaFroms.csproj|solutionrelative:pacientes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B6A75ED2-3F1A-4FAC-9DE2-32773D75A1D7}|DentistaFroms.csproj|c:\\users\\guilh\\ua\\2_ano\\2_semestre\\bd\\projeto\\projetobd\\forms\\dentistafroms\\models\\utilizador.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B6A75ED2-3F1A-4FAC-9DE2-32773D75A1D7}|DentistaFroms.csproj|solutionrelative:models\\utilizador.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B6A75ED2-3F1A-4FAC-9DE2-32773D75A1D7}|DentistaFroms.csproj|c:\\users\\guilh\\ua\\2_ano\\2_semestre\\bd\\projeto\\projetobd\\forms\\dentistafroms\\utilizadores.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B6A75ED2-3F1A-4FAC-9DE2-32773D75A1D7}|DentistaFroms.csproj|solutionrelative:utilizadores.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B6A75ED2-3F1A-4FAC-9DE2-32773D75A1D7}|DentistaFroms.csproj|c:\\users\\guilh\\ua\\2_ano\\2_semestre\\bd\\projeto\\projetobd\\forms\\dentistafroms\\utilizadores.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{B6A75ED2-3F1A-4FAC-9DE2-32773D75A1D7}|DentistaFroms.csproj|solutionrelative:utilizadores.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B6A75ED2-3F1A-4FAC-9DE2-32773D75A1D7}|DentistaFroms.csproj|c:\\users\\guilh\\ua\\2_ano\\2_semestre\\bd\\projeto\\projetobd\\forms\\dentistafroms\\repositories\\utilizadoresrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B6A75ED2-3F1A-4FAC-9DE2-32773D75A1D7}|DentistaFroms.csproj|solutionrelative:repositories\\utilizadoresrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B6A75ED2-3F1A-4FAC-9DE2-32773D75A1D7}|DentistaFroms.csproj|c:\\users\\guilh\\ua\\2_ano\\2_semestre\\bd\\projeto\\projetobd\\forms\\dentistafroms\\consultas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{B6A75ED2-3F1A-4FAC-9DE2-32773D75A1D7}|DentistaFroms.csproj|solutionrelative:consultas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
     {
-      "Orientation": 0,
+      "Orientation": 1,
       "VerticalTabListWidth": 256,
       "DocumentGroups": [
         {
-          "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "DockedHeight": 275,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -54,115 +34,53 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Utilizadores.cs",
-              "DocumentMoniker": "C:\\Users\\guilh\\UA\\2_ano\\2_semestre\\BD\\projeto\\projetoBD\\forms\\DentistaFroms\\Utilizadores.cs",
-              "RelativeDocumentMoniker": "Utilizadores.cs",
-              "ToolTip": "C:\\Users\\guilh\\UA\\2_ano\\2_semestre\\BD\\projeto\\projetoBD\\forms\\DentistaFroms\\Utilizadores.cs",
-              "RelativeToolTip": "Utilizadores.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "ConsultasRepository.cs",
+              "DocumentMoniker": "C:\\Users\\guilh\\UA\\2_ano\\2_semestre\\BD\\projeto\\projetoBD\\forms\\DentistaFroms\\Repositories\\ConsultasRepository.cs",
+              "RelativeDocumentMoniker": "Repositories\\ConsultasRepository.cs",
+              "ToolTip": "C:\\Users\\guilh\\UA\\2_ano\\2_semestre\\BD\\projeto\\projetoBD\\forms\\DentistaFroms\\Repositories\\ConsultasRepository.cs",
+              "RelativeToolTip": "Repositories\\ConsultasRepository.cs",
+              "ViewState": "AgIAADcAAAAAAAAAAAAAADcAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-05T01:18:59.538Z",
+              "WhenOpened": "2025-06-07T14:33:42.403Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Utilizadores.cs [Projeto]",
-              "DocumentMoniker": "C:\\Users\\guilh\\UA\\2_ano\\2_semestre\\BD\\projeto\\projetoBD\\forms\\DentistaFroms\\Utilizadores.cs",
-              "RelativeDocumentMoniker": "Utilizadores.cs",
-              "ToolTip": "C:\\Users\\guilh\\UA\\2_ano\\2_semestre\\BD\\projeto\\projetoBD\\forms\\DentistaFroms\\Utilizadores.cs [Projeto]",
-              "RelativeToolTip": "Utilizadores.cs [Projeto]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-05T01:18:56.911Z",
-              "EditorCaption": " [Projeto]"
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "CreateEditFormPacientes.cs [Projeto]",
-              "DocumentMoniker": "C:\\Users\\guilh\\UA\\2_ano\\2_semestre\\BD\\projeto\\projetoBD\\forms\\DentistaFroms\\CreateEditFormPacientes.cs",
-              "RelativeDocumentMoniker": "CreateEditFormPacientes.cs",
-              "ToolTip": "C:\\Users\\guilh\\UA\\2_ano\\2_semestre\\BD\\projeto\\projetoBD\\forms\\DentistaFroms\\CreateEditFormPacientes.cs [Projeto]",
-              "RelativeToolTip": "CreateEditFormPacientes.cs [Projeto]",
+              "Title": "Consultas.cs",
+              "DocumentMoniker": "C:\\Users\\guilh\\UA\\2_ano\\2_semestre\\BD\\projeto\\projetoBD\\forms\\DentistaFroms\\Consultas.cs",
+              "RelativeDocumentMoniker": "Consultas.cs",
+              "ToolTip": "C:\\Users\\guilh\\UA\\2_ano\\2_semestre\\BD\\projeto\\projetoBD\\forms\\DentistaFroms\\Consultas.cs",
+              "RelativeToolTip": "Consultas.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-05T01:17:16.362Z",
-              "EditorCaption": " [Projeto]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "CreateEditFormPacientes.cs",
-              "DocumentMoniker": "C:\\Users\\guilh\\UA\\2_ano\\2_semestre\\BD\\projeto\\projetoBD\\forms\\DentistaFroms\\CreateEditFormPacientes.cs",
-              "RelativeDocumentMoniker": "CreateEditFormPacientes.cs",
-              "ToolTip": "C:\\Users\\guilh\\UA\\2_ano\\2_semestre\\BD\\projeto\\projetoBD\\forms\\DentistaFroms\\CreateEditFormPacientes.cs",
-              "RelativeToolTip": "CreateEditFormPacientes.cs",
-              "ViewState": "AgIAAC8AAAAAAAAAAAAgwAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-05T01:17:19.789Z",
+              "WhenOpened": "2025-06-07T14:36:20.298Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "CreateEditFormsUtilizadores.cs [Projeto]",
-              "DocumentMoniker": "C:\\Users\\guilh\\UA\\2_ano\\2_semestre\\BD\\projeto\\projetoBD\\forms\\DentistaFroms\\CreateEditFormsUtilizadores.cs",
-              "RelativeDocumentMoniker": "CreateEditFormsUtilizadores.cs",
-              "ToolTip": "C:\\Users\\guilh\\UA\\2_ano\\2_semestre\\BD\\projeto\\projetoBD\\forms\\DentistaFroms\\CreateEditFormsUtilizadores.cs [Projeto]",
-              "RelativeToolTip": "CreateEditFormsUtilizadores.cs [Projeto]",
+              "Title": "Consultas.cs [Projeto]",
+              "DocumentMoniker": "C:\\Users\\guilh\\UA\\2_ano\\2_semestre\\BD\\projeto\\projetoBD\\forms\\DentistaFroms\\Consultas.cs",
+              "RelativeDocumentMoniker": "Consultas.cs",
+              "ToolTip": "C:\\Users\\guilh\\UA\\2_ano\\2_semestre\\BD\\projeto\\projetoBD\\forms\\DentistaFroms\\Consultas.cs [Projeto]",
+              "RelativeToolTip": "Consultas.cs [Projeto]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-05T01:06:31.907Z",
-              "EditorCaption": " [Projeto]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Pacientes.cs [Projeto]",
-              "DocumentMoniker": "C:\\Users\\guilh\\UA\\2_ano\\2_semestre\\BD\\projeto\\projetoBD\\forms\\DentistaFroms\\Pacientes.cs",
-              "RelativeDocumentMoniker": "Pacientes.cs",
-              "ToolTip": "C:\\Users\\guilh\\UA\\2_ano\\2_semestre\\BD\\projeto\\projetoBD\\forms\\DentistaFroms\\Pacientes.cs [Projeto]",
-              "RelativeToolTip": "Pacientes.cs [Projeto]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-05T01:04:38.203Z",
+              "WhenOpened": "2025-06-07T14:30:44.347Z",
               "EditorCaption": " [Projeto]"
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "CreateEditFormsUtilizadores.cs",
-              "DocumentMoniker": "C:\\Users\\guilh\\UA\\2_ano\\2_semestre\\BD\\projeto\\projetoBD\\forms\\DentistaFroms\\CreateEditFormsUtilizadores.cs",
-              "RelativeDocumentMoniker": "CreateEditFormsUtilizadores.cs",
-              "ToolTip": "C:\\Users\\guilh\\UA\\2_ano\\2_semestre\\BD\\projeto\\projetoBD\\forms\\DentistaFroms\\CreateEditFormsUtilizadores.cs",
-              "RelativeToolTip": "CreateEditFormsUtilizadores.cs",
-              "ViewState": "AgIAABMAAAAAAAAAAAAIwCgAAAAJAAAAAAAAAA==",
+              "Title": "Consulta.cs",
+              "DocumentMoniker": "C:\\Users\\guilh\\UA\\2_ano\\2_semestre\\BD\\projeto\\projetoBD\\forms\\DentistaFroms\\Models\\Consulta.cs",
+              "RelativeDocumentMoniker": "Models\\Consulta.cs",
+              "ToolTip": "C:\\Users\\guilh\\UA\\2_ano\\2_semestre\\BD\\projeto\\projetoBD\\forms\\DentistaFroms\\Models\\Consulta.cs",
+              "RelativeToolTip": "Models\\Consulta.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-05T01:00:32.164Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "UtilizadoresRepository.cs",
-              "DocumentMoniker": "C:\\Users\\guilh\\UA\\2_ano\\2_semestre\\BD\\projeto\\projetoBD\\forms\\DentistaFroms\\Repositories\\UtilizadoresRepository.cs",
-              "RelativeDocumentMoniker": "Repositories\\UtilizadoresRepository.cs",
-              "ToolTip": "C:\\Users\\guilh\\UA\\2_ano\\2_semestre\\BD\\projeto\\projetoBD\\forms\\DentistaFroms\\Repositories\\UtilizadoresRepository.cs",
-              "RelativeToolTip": "Repositories\\UtilizadoresRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAALsAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-05T00:47:37.218Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Utilizador.cs",
-              "DocumentMoniker": "C:\\Users\\guilh\\UA\\2_ano\\2_semestre\\BD\\projeto\\projetoBD\\forms\\DentistaFroms\\Models\\Utilizador.cs",
-              "RelativeDocumentMoniker": "Models\\Utilizador.cs",
-              "ToolTip": "C:\\Users\\guilh\\UA\\2_ano\\2_semestre\\BD\\projeto\\projetoBD\\forms\\DentistaFroms\\Models\\Utilizador.cs",
-              "RelativeToolTip": "Models\\Utilizador.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-05T00:45:31.152Z",
+              "WhenOpened": "2025-06-07T14:30:41.763Z",
               "EditorCaption": ""
             }
           ]

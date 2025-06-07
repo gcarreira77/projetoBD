@@ -18,6 +18,9 @@ namespace DentistaFroms
         {
             InitializeComponent();
 
+            tbnum.Visible = false;
+            label2.Visible = false;
+
             this.DialogResult = DialogResult.Cancel;
         }
 
@@ -35,7 +38,11 @@ namespace DentistaFroms
             this.tbnome.Text = paciente.nome;
             this.tbnif.Text = paciente.nif.ToString();
             this.dtpdatanasc.Value = DateTime.Parse(paciente.data_nasc);
+            this.tbnum.Text = paciente.num_paciente.ToString();
 
+            tbnum.Visible = true;
+            label2.Visible = true;
+            tbnum.ReadOnly = true;
             tbnome.ReadOnly = true;
             tbnif.ReadOnly = true;
             dtpdatanasc.Enabled = false; 

@@ -13,9 +13,13 @@ namespace DentistaFroms
 {
     public partial class Utilizadores : Form
     {
-        public Utilizadores()
+        private Forms1 _mainForm;
+
+        public Utilizadores(Forms1 mainForm)
         {
             InitializeComponent();
+            _mainForm = mainForm;
+
             ReadUtilizadores();
         }
 
@@ -25,10 +29,12 @@ namespace DentistaFroms
 
             dataTable.Columns.Add("ID_util");
             dataTable.Columns.Add("nome");
-            dataTable.Columns.Add("morada");
+            dataTable.Columns.Add("tipo");
+            dataTable.Columns.Add("especialidade");
             dataTable.Columns.Add("num_contribuinte");
-            dataTable.Columns.Add("data_nasc");
+            dataTable.Columns.Add("morada");
             dataTable.Columns.Add("cod_postal");
+            dataTable.Columns.Add("data_nasc");
             dataTable.Columns.Add("telemovel");
 
             var repo = new UtilizadoresRepository();
@@ -40,10 +46,12 @@ namespace DentistaFroms
 
                 row["ID_util"] = utilizador.ID_util;
                 row["nome"] = utilizador.nome;
-                row["morada"] = utilizador.morada;
+                row["tipo"] = utilizador.tipo;
+                row["especialidade"] = utilizador.especialidade;
                 row["num_contribuinte"] = utilizador.num_contribuinte;
-                row["data_nasc"] = utilizador.data_nasc;
+                row["morada"] = utilizador.morada;
                 row["cod_postal"] = utilizador.cod_postal;
+                row["data_nasc"] = utilizador.data_nasc;
                 row["telemovel"] = utilizador.telemovel;
 
                 dataTable.Rows.Add(row);
@@ -52,9 +60,15 @@ namespace DentistaFroms
             this.utilizadoresTable.DataSource = dataTable;
         }
 
+        private void btnVoltar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            _mainForm.Show();
+        }
+
         private void btnAddUtilizador_Click(object sender, EventArgs e)
         {
-            CreateEditFormsUtilizadores form = new CreateEditFormsUtilizadores();
+            CreateEditFormUtils form = new CreateEditFormUtils();
             if (form.ShowDialog() == DialogResult.OK)
             {
                 ReadUtilizadores();
@@ -63,24 +77,23 @@ namespace DentistaFroms
 
         private void btnEditUtilizador_Click(object sender, EventArgs e)
         {
-            if (utilizadoresTable.SelectedRows.Count == 0) return;
+            var val = this.utilizadoresTable.SelectedRows[0].Cells[0].Value.ToString();
+            if (val == null || val.Length == 0) return;
 
-            var val = this.utilizadoresTable.SelectedRows[0].Cells[0].Value?.ToString();
-            if (string.IsNullOrWhiteSpace(val)) return;
-
-            int id_util = int.Parse(val);
+            int Id_util = int.Parse(val);
 
             var repo = new UtilizadoresRepository();
-            var utilizador = repo.GetUtilizador(id_util);
+            var u = repo.GetUtilizador(Id_util);
 
-            if (utilizador == null) return;
+            if (u == null) return;
 
-            CreateEditFormsUtilizadores form = new CreateEditFormsUtilizadores();
-            form.EditUtilizador(utilizador);
+            CreateEditFormUtils form = new CreateEditFormUtils();
+            form.EditUtilizador(u);
             if (form.ShowDialog() == DialogResult.OK)
             {
                 ReadUtilizadores();
             }
+
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
@@ -88,10 +101,10 @@ namespace DentistaFroms
             if (utilizadoresTable.SelectedRows.Count == 0)
                 return;
 
-            var val = utilizadoresTable.SelectedRows[0].Cells[0].Value?.ToString();
+            var val = this.utilizadoresTable.SelectedRows[0].Cells[0].Value?.ToString();
             if (string.IsNullOrWhiteSpace(val)) return;
 
-            int id_util = int.Parse(val);
+            int Id_util = int.Parse(val);
 
             DialogResult dialogResult = MessageBox.Show(
                 "Quer mesmo eliminar este utilizador?",
@@ -104,7 +117,7 @@ namespace DentistaFroms
                 return;
 
             var repo = new UtilizadoresRepository();
-            string error = repo.DeleteUtilizador(id_util);
+            string error = repo.DeleteUtilizador(Id_util);
 
             if (!string.IsNullOrEmpty(error))
             {
@@ -113,15 +126,6 @@ namespace DentistaFroms
             }
 
             ReadUtilizadores();
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
         }
     }
 }

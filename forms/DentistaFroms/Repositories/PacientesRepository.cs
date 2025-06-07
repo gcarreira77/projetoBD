@@ -11,7 +11,7 @@ namespace DentistaFroms.Repositories
 {
     public class PacientesRepository
     {
-        private readonly string connectionString = "Data Source=PCGC;Initial Catalog=Dentista;Integrated Security=True;Trust Server Certificate=True";
+        private readonly string connectionString = DatabaseConfig.ConnectionString;
 
         public List<Paciente> GetPacientes()
         {
